@@ -8,3 +8,10 @@ For Entire Clone
 ```
 $ git clone git@github.com:YumaNK/ashioto.git --recursive
 ```
+
+### Frontend
+
+```
+yarn install
+yarn run build
+```
