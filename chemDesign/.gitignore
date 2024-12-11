@@ -1,0 +1,49 @@
+# Node.js関連
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+.pnpm-debug.log*
+
+# ビルド関連
+build/
+dist/
+.cache/
+
+# 環境設定ファイル
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ログファイル
+logs/
+*.log
+yarn-error.log
+*.pid
+*.seed
+*.pid.lock
+
+# エディタやOS関連
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+*.iml
+
+# TypeScript関連
+*.tsbuildinfo
+
+# Test関連
+coverage/
+.jest/
+
+# その他
+*.bak
+*.tmp
+*.log
+
