@@ -14,7 +14,7 @@ export interface Compound {
     {
       id: 0,
       name: "CN1[C@H](COc2nc3cc(-c4cc(O)cc5ccccc45)ncc3c(N3CC(CC4)NC4C3)n2)CCC1",
-      image: "/images/000_dummy.png",
+      image: "images/000_dummy.png",
       mpoScore: 4.05,
       cLogP: 3.24,
       hBondAcceptors: 0,
@@ -24,7 +24,7 @@ export interface Compound {
     {
       id: 1,
       name: "CN1[C@H](COc2nc(N3CC(CC4)NC4C3)c(cnc(-c3cc(O)cc4ccccc34)c3F)c3n2)CCC1",
-      image: "/images/001_dummy.png",
+      image: `${process.env.PUBLIC_URL}/images/001_dummy.png`,
       mpoScore: 2.37,
       cLogP: 0.16,
       hBondAcceptors: 1,
