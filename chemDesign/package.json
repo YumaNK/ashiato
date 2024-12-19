@@ -10,8 +10,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "predeploy": "yarn build",
-        "deploy": "gh-pages -d build",
-        "localdeploy": "yarn build && serve -s build"
+        "deploy": "gh-pages -d build"
     },
     "dependencies": {
         "@emotion/react": "^11.10.6",
