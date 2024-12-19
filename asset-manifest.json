@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/ashioto/static/js/main.fb364961.js",
+    "main.js": "/ashioto/static/js/main.e1923b6b.js",
     "index.html": "/ashioto/index.html",
-    "main.fb364961.js.map": "/ashioto/static/js/main.fb364961.js.map"
+    "main.e1923b6b.js.map": "/ashioto/static/js/main.e1923b6b.js.map"
   },
   "entrypoints": [
-    "static/js/main.fb364961.js"
+    "static/js/main.e1923b6b.js"
   ]
 }
