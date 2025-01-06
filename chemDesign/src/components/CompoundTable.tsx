@@ -18,7 +18,7 @@ const CompoundTable: React.FC<CompoundTableProps> = ({ compounds }) => {
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
-      field: "name", headerName: "Molecule", width: 460, renderCell: (params: any) => (
+      field: "name", headerName: "Molecule", width: 400, renderCell: (params: any) => (
         <div style={{ wordWrap: "break-word", whiteSpace: "normal" }}>
           {params.value}
         </div>
@@ -30,13 +30,13 @@ const CompoundTable: React.FC<CompoundTableProps> = ({ compounds }) => {
       width: 250,
       renderCell: (params: any) => <img src={params.value} alt={params.row.name} width="100%" onLoad={(e) => handleImageLoad(params.row.id, e)} />,
     },
-    { field: "mpoScore", headerName: "MPO Score", width: 150 },
-    { field: "cLogP", headerName: "cLogP", width: 150 },
-    { field: "hBondAcceptors", headerName: "H-Bond Acceptors", width: 150 },
-    { field: "hBondDonors", headerName: "H-Bond Donors", width: 150 },
-    { field: "mass", headerName: "Mass", width: 150 },
-    { field: "admetScore", headerName: "ADMET Score", width: 150 },
-    {  field: "syntheticAccessibility", headerName: "SA Score", width: 150 },
+    { field: "mpoScore", headerName: "MPO Score", width: 140 },
+    { field: "cLogP", headerName: "cLogP", width: 110 },
+    { field: "hBondAcceptors", headerName: "H-Bond Acceptors", width: 140 },
+    { field: "hBondDonors", headerName: "H-Bond Donors", width: 140 },
+    { field: "mass", headerName: "Mass", width: 110 },
+    { field: "admetScore", headerName: "ADMET Score", width: 140 },
+    { field: "syntheticAccessibility", headerName: "SA Score", width: 140 },
   ];
 
   const getRowHeight = (params: any) => {
