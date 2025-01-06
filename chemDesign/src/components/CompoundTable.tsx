@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { DataGrid } from "@mui/x-data-grid";
-import { fetchCompounds, Compound } from "../api/compoundApi";
+import { Compound } from "../api/compoundApi";
 
-const CompoundTable: React.FC = () => {
-  const [compounds, setCompounds] = useState<Compound[]>([]);
+interface CompoundTableProps {
+  compounds: Compound[];
+}
+
+const CompoundTable: React.FC<CompoundTableProps> = ({ compounds }) => {
   const [imageHeights, setImageHeights] = useState<{ [key: string]: number }>({});
-
-
-  useEffect(() => {
-    fetchCompounds().then(setCompounds);
-  }, []);
 
   const handleImageLoad = (id: string, event: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const { naturalHeight } = event.target as HTMLImageElement;
     setImageHeights(prev => ({ ...prev, [id]: naturalHeight }));
   };
 
+
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
-      field: "name", headerName: "Molecule", width: 500, renderCell: (params: any) => (
+      field: "name", headerName: "Molecule", width: 460, renderCell: (params: any) => (
         <div style={{ wordWrap: "break-word", whiteSpace: "normal" }}>
           {params.value}
         </div>
@@ -36,6 +35,8 @@ const CompoundTable: React.FC = () => {
     { field: "hBondAcceptors", headerName: "H-Bond Acceptors", width: 150 },
     { field: "hBondDonors", headerName: "H-Bond Donors", width: 150 },
     { field: "mass", headerName: "Mass", width: 150 },
+    { field: "admetScore", headerName: "ADMET Score", width: 150 },
+    {  field: "syntheticAccessibility", headerName: "SA Score", width: 150 },
   ];
 
   const getRowHeight = (params: any) => {

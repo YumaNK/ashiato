@@ -9,6 +9,8 @@ interface Compound {
     hBondAcceptors: number;
     hBondDonors: number;
     mass: number;
+    admetScore: number;
+    syntheticAccessibility: number;
   }
   
   // MPOスコアで化合物をフィルタリング
